@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>매물등록r</title>
+    <title>매물등록</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
@@ -54,7 +54,7 @@
     <![endif]-->
   </head>
   <body>
-    <form id="aa-signin" form name="registerform" action="/properties-register" method="post">
+    <form id="aa-signin" form name="registerform" action="/properties-register" method="post" enctype="multipart/form-data">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -65,7 +65,8 @@
                     ><img src="img/logo2.jpg" width="300" height="300" />
                   </a>
                   <br />
-                  <input /> <button>이미지첨부하기</button>
+                  <input type = 'file' name ="upload"/>
+                   <!-- <button>이미지첨부하기</button> -->
                 </div>
                 <form class="contactform">
                   <div class="aa-single-field">
@@ -78,7 +79,18 @@
                       value=""
                       name="userId"
                     />
-                  </div>
+                    <div class="aa-single-field">
+                      <label for="phone"
+                        >등록자 연락처<span class="required">*</span></label
+                      >
+                      <input
+                        type="text"
+                        required="required"
+                        aria-required="true"
+                        value=""
+                        name="userPhoneNumber"
+                      />
+                    </div>
                   <div class="aa-single-field">
                     <label for="name"
                       >매물형태(전세/월세/매매)
@@ -117,7 +129,7 @@
                     />
                   </div>
                   <div class="aa-single-field">
-                    <label for="phone"
+                    <label for="number"
                       >방개수 <span class="required">*</span></label
                     >
                     <input
@@ -125,7 +137,7 @@
                       required="required"
                       aria-required="true"
                       value=""
-                      name="userPhoneNumber"
+                      name="room"
                     />
                   </div>
                   <div class="aa-single-field">
