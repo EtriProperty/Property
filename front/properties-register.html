@@ -1,50 +1,36 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>매물등록</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <title>메인페이지</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+   
+    
     <!-- Font awesome -->
-    <link href="css/font-awesome.css" rel="stylesheet" />
+    <link href="css/font-awesome.css" rel="stylesheet">
     <!-- Bootstrap -->
-    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet">   
     <!-- slick slider -->
-    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
     <!-- price picker slider -->
-    <link rel="stylesheet" type="text/css" href="css/nouislider.css" />
+    <link rel="stylesheet" type="text/css" href="css/nouislider.css">
     <!-- Fancybox slider -->
-    <link
-      rel="stylesheet"
-      href="css/jquery.fancybox.css"
-      type="text/css"
-      media="screen"
-    />
+    <link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css" media="screen" /> 
     <!-- Theme color -->
-    <link
-      id="switcher"
-      href="css/theme-color/default-theme.css"
-      rel="stylesheet"
-    />
+    <link id="switcher" href="css/theme-color/default-theme.css" rel="stylesheet">     
 
     <!-- Main style sheet -->
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet">    
 
+   
     <!-- Google Font -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Vollkorn"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans"
-      rel="stylesheet"
-      type="text/css"
-    />
+    <link href='https://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -52,142 +38,252 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-    <script language="javascript">
-      function showConfirm() {
-     
-        alert("매물이 등록되었습니다.");
-      
-      }
-      </script>
+  
 
   </head>
-  <body>
-    <form id="aa-signin" form name="registerform" action="/properties-register" method="post" enctype="multipart/form-data">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="aa-signin-area">
-              <div class="aa-signin-form">
-                <div class="aa-signin-form-title">
-                  <a class="aa-property-home" href="index.html"
-                    ><img src="img/logo2.jpg" width="300" height="300" />
-                  </a>
-                  <br />
-                  <input type = 'file' name ="upload"/>
-                   <!-- <button>이미지첨부하기</button> -->
+  <body class="aa-price-range">   
+  <!-- Pre Loader -->
+  <div id="aa-preloader-area">
+    <div class="pulse"></div>
+  </div>
+  <!-- SCROLL TOP BUTTON -->
+    <a class="scrollToTop" href="#"><i class="fa fa-angle-double-up"></i></a>
+  <!-- END SCROLL TOP BUTTON -->
+
+
+  <!-- Start header section -->
+  <header id="aa-header">  
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="aa-header-area">
+            <div class="row">
+              <div class="col-md-6 col-sm-6 col-xs-6">
+                <div class="aa-header-left">
+                  <div class="aa-telephone-no">
+                    <메타마스크 계정소유자만 이용 가능> 
+                  </div>
+                  <div class="aa-email hidden-xs">
+                  </div>
+                </div> 
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-6">
+                <div class="aa-header-right">
+                  <a href="register.html" class="aa-register">회원가입</a>
+                  <a href="signin.html" class="aa-login">로그인</a>
                 </div>
-                <form class="contactform">
-                  <div class="aa-single-field">
-                    <label for="id">주소 <span class="required">*</span></label>
-                    >
-                    <input
-                      type="text"
-                      required="required"
-                      aria-required="true"
-                      value=""
-                      name="userId"
-                    />
-                    <div class="aa-single-field">
-                      <label for="phone"
-                        >등록자 연락처<span class="required">*</span></label
-                      >
-                      <input
-                        type="text"
-                        required="required"
-                        aria-required="true"
-                        value=""
-                        name="userPhoneNumber"
-                      />
-                    </div>
-                  <div class="aa-single-field">
-                    <label for="name"
-                      >매물형태(전세/월세/매매)
-                      <span class="required">*</span></label
-                    >
-                    <input
-                      type="text"
-                      required="required"
-                      aria-required="true"
-                      value=""
-                      name="userName"
-                    />
-                  </div>
-                  <div class="aa-single-field">
-                    <label for="text"
-                      >가격(보증금/월세) <span class="required">*</span></label
-                    >
-                    <input type="text" name="userPassword" />
-                  </div>
-                  <div class="aa-single-field">
-                    <label for="confirm-password"
-                      >층수 <span class="required">*</span></label
-                    >
-                    <input type="text" name="confirmUserPassword" />
-                  </div>
-                  <div class="aa-single-field">
-                    <label for="email"
-                      >방평수 <span class="required">*</span></label
-                    >
-                    <input
-                      type="text"
-                      required="required"
-                      aria-required="true"
-                      value=""
-                      name="userEmail"
-                    />
-                  </div>
-                  <div class="aa-single-field">
-                    <label for="number"
-                      >방개수 <span class="required">*</span></label
-                    >
-                    <input
-                      type="text"
-                      required="required"
-                      aria-required="true"
-                      value=""
-                      name="room"
-                    />
-                  </div>
-                  <div class="aa-single-field">
-                    <label for="opt"
-                      >옵션 <span class="required">*</span>
-                      <br>
-                  <label
-                    ><input type="checkbox" name="color" value="Desk" />
-                    책상</label
-                  >
-                  <label>
-                    <input type="checkbox" name="color" value="Desk" />
-                    의자</label
-                  >
-              
-                  <div class="aa-single-submit">
-                    <input type="button" value="등록하기" onclick="showConfirm();" />
-                  </div>
-                  
-                </form>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </header>
+  <!-- End header section -->
+  <!-- Start menu section -->
+  <section id="aa-menu-area">
+    <nav class="navbar navbar-default main-navbar" role="navigation">  
+      <div class="container">
+        <div class="navbar-header">
+          <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
+          <!-- LOGO -->                                               
+          <!-- Text based logo -->
+          <a href="index.html"><img src="img/logo.jpg" width="150" height="150"></a>
+          <!-- Image based logo -->
+          <!-- <a class="navbar-brand aa-logo-img" href="index.html"><img src="img/logo.png" alt="logo"></a> -->                     
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
+            <li><a href="properties.html">매물찾기</a></li>
+            <li><a href="properties-register.html">매물등록</a></li>
+            <li><a href="membershipInfoRe.html">마이페이지</a></li>
+          </ul>                           
+        </div><!--/.nav-collapse -->       
+      
+      </div>          
+    </nav> 
+  </section>
+  <!-- End menu section -->
 
-    <!-- jQuery library -->
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
-    <script src="js/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.js"></script>
-    <!-- slick slider -->
-    <script type="text/javascript" src="js/slick.js"></script>
-    <!-- Price picker slider -->
-    <script type="text/javascript" src="js/nouislider.js"></script>
-    <!-- mixit slider -->
-    <script type="text/javascript" src="js/jquery.mixitup.js"></script>
-    <!-- Add fancyBox -->
-    <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
-    <!-- Custom js -->
-    <script src="js/custom.js"></script>
+  <!-- Start Proerty header  -->
+
+  <section id="aa-property-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="aa-property-header-inner">
+            <h2>중개자 없이 방을 구하세요</h2>
+            <a>메타 마스크가 필요합니다.</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> 
+  <!-- End Proerty header  -->
+
+  
+   <!-- Start Properties  -->
+  <section id="aa-properties">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="aa-properties-content">
+            <!-- start properties content head -->
+            <div class="aa-properties-content-head">              
+              <div class="aa-properties-content-head-left">
+               
+              <h2>방 등록하기</h2>
+              </div>
+              <div class="aa-properties-content-head-right">
+                
+               
+              </div>            
+            </div>
+            <!-- Start properties content body -->
+            <div class="aa-properties-content-body">
+                
+            </div>
+            <form name="registerform" action="/properties-register" method="post">
+              <div class="aa-single-field2">
+              </br>
+                <label for="text">방 사진 첨부하기</label>
+                <input id="browse" type="file" onchange="previewFiles()" multiple>
+                <div id="preview"></div>
+                </br>
+                <label for="id">주소 <span class="required">*</span></label>
+                
+                <input
+                  type="text"
+                  required="required"
+                  aria-required="true"
+                  value=""
+                  name="userId"
+                />
+              </div>
+              <div class="aa-single-field2">
+                <label for="name"
+                  >매물형태(전세/월세/매매)
+                  <span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  required="required"
+                  aria-required="true"
+                  value=""
+                  name="userName"
+                />
+              </div>
+              <div class="aa-single-field2">
+                <label for="text"
+                  >가격(보증금/월세) <span class="required">*</span></label
+                >
+                <input type="text" name="userPassword" />
+              </div>
+              <div class="aa-single-field2">
+                <label for="confirm-password"
+                  >층수 <span class="required">*</span></label
+                >
+                <input type="text" name="confirmUserPassword" />
+              </div>
+              <div class="aa-single-field2">
+                <label for="email"
+                  >방평수 <span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  required="required"
+                  aria-required="true"
+                  value=""
+                  name="userEmail"
+                />
+              </div>
+              <div class="aa-single-field2">
+                <label for="phone"
+                  >방개수 <span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  required="required"
+                  aria-required="true"
+                  value=""
+                  name="userPhoneNumber"
+                />
+              </div>
+              <div class="aa-single-submit">
+                <input type="button" value="등록하기" onclick="showConfirm();" />
+              </div>
+            </form>
+            </div>
+          </div>
+        </div>
+        <!-- Start properties sidebar -->
+    
+          </aside>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- / Properties  -->
+
+  <!-- Footer -->
+
+  <!-- / Footer -->
+
+
+ 
+  <!-- jQuery library -->
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+  <script src="js/jquery.min.js"></script>   
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.js"></script>   
+  <!-- slick slider -->
+  <script type="text/javascript" src="js/slick.js"></script>
+  <!-- Price picker slider -->
+  <script type="text/javascript" src="js/nouislider.js"></script>
+   <!-- mixit slider -->
+  <script type="text/javascript" src="js/jquery.mixitup.js"></script>
+  <!-- Add fancyBox -->        
+  <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+  <!-- Custom js -->
+  <script src="js/custom.js"></script> 
+  <script type="text/javascript">
+    function previewFiles() {
+
+var preview = document.querySelector('#preview');
+var files   = document.querySelector('input[type=file]').files;
+
+function readAndPreview(file) {
+
+  if ( /\.(jpe?g|png|gif)$/i.test(file.name) ) {
+    var reader = new FileReader();
+
+    reader.addEventListener("load", function () {
+      var image = new Image();
+      image.height = 100;
+      image.title = file.name;
+      image.src = this.result;
+      preview.appendChild( image );
+    }, false);
+
+    reader.readAsDataURL(file);
+  }
+
+}
+
+if (files) {
+  [].forEach.call(files, readAndPreview);
+}
+
+}
+  </script>
+
+<script language="javascript">
+  function showConfirm() {
+ 
+    alert("매물이 등록되었습니다.");
+  
+  }
+  </script>
+
   </body>
 </html>

@@ -145,16 +145,7 @@
                           required="required"
                         />
                       </p>
-                      
-                      
-                      <p class="form-submit">
-                        <input
-                          type="submit"
-                          name="submit"
-                          class="aa-browse-btn"
-                          value="등록하기"
-                        />
-                      </p>
+                      <button><a href="#" onclick="review();">등록하기</a></button>
                     </form>
                   </div>
                 </div>
@@ -228,6 +219,25 @@
   <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
   <!-- Custom js -->
   <script src="js/custom.js"></script> 
+  <script>
+    // content, cate, index를 인수로 받아 form 태그로 전송하는 함수
+    function review(content, cate, index = 0) {
+      // name이 paging인 태그
+      var f = document.paging;
+
+      // form 태그의 하위 태그 값 매개 변수로 대입
+      f.content.value = content;
+      f.cate.value = cate;
+      f.index.value = index;
+
+      // input태그의 값들을 전송하는 주소
+      f.action = "./content.do"
+
+      // 전송 방식 : post
+      f.method = "post"
+      f.button();
+    };
+    </script>
 
   </body>
 </html>

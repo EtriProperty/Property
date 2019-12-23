@@ -3253,9 +3253,67 @@ img {
 /*==================
  SIGNIN & REGISTER  PAGE
 ====================*/
+.aa-single-field2 {
+  display: inline;
+  float: left;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.aa-single-field2 label {
+  color: #000;
+  display: inline-block;
+  text-align: left;
+}
+.aa-single-field2 label .required {
+  color: #f60000;
+}
+#aa-signin .aa-signin-area .aa-signin-form .aa-single-field label {
+  color: #000;
+  display: inline-block;
+  text-align: left;
+}
+
+.aa-single-field2 input[type='password'],
+.aa-single-field2 input[type='text'],
+.aa-single-field2 input[type='email'] {
+  border: solid black 0.2px;
+  color: #555;
+  margin-bottom: 10px;
+  height: 35px;
+  padding: 5px;
+  width: 100%;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.aa-single-field2 input[type='text'],
+.aa-single-field2 input[type='email'],
+.aa-single-field2 input[type='password'] {
+  height: 30px;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+.aa-single-field2 textarea {
+  border: none;
+  border-bottom: 2px solid #ccc;
+  color: #555;
+  margin-bottom: 5px;
+  padding: 10px;
+  height: 100px;
+  width: 100%;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
 
 #aa-signin {
-  background-image: url('../img/logo2.jpg');
+  background-image: url('../img/.jpg');
   background-position: center center;
   background-size: initial;
   bottom: 0;
