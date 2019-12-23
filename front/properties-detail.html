@@ -150,7 +150,9 @@
                   </h2>
 <hr>
 <div class="wave">
-   <a href="membershipInfoRe.html" onclick="mylist();"> ♥ (찜하기)</a> 
+   <input type="submit" value="찜하기" onclick="wish();" />
+   <a href="membershipInfoRe.html"></a>
+
 </div>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 <div class="wave2">
@@ -195,14 +197,13 @@
 
                     <br><br>
                  <td> <h3>후기를 적어주세요.</h3>
-                 <td></td> <textarea cols="10"  style="width:600px;height:100px;"
+                 <td></td> <textarea id="review-text" cols="10"  style="width:600px;height:100px;"
                   placeholder=" 방을 본 후기를 적어주세요 " name="content" class="form-control"></textarea>
                   <br>
-<<<<<<< HEAD
-                <button><a href="#" onclick="review();"> 후기등록</a></button>
-=======
-                  <button><a href="#" onclick="review();">후기 등록</a></button>
->>>>>>> ea1a1ffe582000058fbb25d84b05db5806bf7e16
+                  <div class = "btnn"> 
+                  <button onclick="review();" > 등록하기</button>
+              </div> 
+           
               <br>
               <br>
               <br>
@@ -248,19 +249,23 @@
       // content, cate, index를 인수로 받아 form 태그로 전송하는 함수
       function review(content, cate, index = 0) {
         // name이 paging인 태그
-        var f = document.paging;
+        // var f = document.paging;
   
-        // form 태그의 하위 태그 값 매개 변수로 대입
-        f.content.value = content;
-        f.cate.value = cate;
-        f.index.value = index;
+        // // form 태그의 하위 태그 값 매개 변수로 대입
+        // f.content.value = content;
+        // f.cate.value = cate;
+        // f.index.value = index;
   
-        // input태그의 값들을 전송하는 주소
-        f.action = "./content.do"
+        // // input태그의 값들을 전송하는 주소
+        // f.action = "./content.do"
   
-        // 전송 방식 : post
-        f.method = "post"
-        f.submit();
+        // // 전송 방식 : post
+        // f.method = "post"
+        // f.submit();
+
+        const review = document.getElementById('review-text').value;
+        // fetch('')
+
       };
       </script>
   </body>
