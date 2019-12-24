@@ -95,7 +95,7 @@
             <!-- LOGO -->
             <!-- Text based logo -->
             <a href="index.html"
-              ><img src="img/logo.jpg" width="150" height="150"
+              ><img src="img/logo.jpg" width="120" height="120"
             /></a>
             <!-- Image based logo -->
             <!-- <a class="navbar-brand aa-logo-img" href="index.html"><img src="img/logo.png" alt="logo"></a> -->
@@ -143,12 +143,11 @@
                   <h2>조용한 주택가 입니다.</h2>
                   <hr />
                   <div class="wave">
-                    <input type="submit" value="찜하기" onclick="wish();" />
-                    <a href="membershipInfoRe.html"></a>
+                    <a href="membershipInfoRe.html">찜하기 </a>
                   </div>
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   <div class="wave2">
-                    <a href="contact.html" onclick="contracct();">계약 신청</a>
+                    <a href="contact.html">계약 신청</a>
                   </div>
                   <hr />
                   <h3>상세 정보</h3>
@@ -185,41 +184,45 @@
                     <option value="4">★★☆☆☆</option>
                     <option value="5">★☆☆☆☆</option>
                   </select>
+                  <form name="review-form" method="post">
+                    <br /><br />
+                    <td><h3>후기를 적어주세요.</h3></td>
+                    <td></td>
+                    <textarea
+                      id="review-text"
+                      cols="10"
+                      style="width:600px;height:100px;"
+                      placeholder=" 방을 본 후기를 적어주세요 "
+                      name="content"
+                      class="form-control"
+                    ></textarea>
+                    <br />
+                    <div class="reviewbtn">
+                      <input
+                        type="submit"
+                        value="등록하기"
+                        onclick="showConfirm();"
+                      />
+                    </div>
 
-                  <br /><br />
-                  <td><h3>후기를 적어주세요.</h3></td>
-                  <td></td>
-                  <textarea
-                    id="review-text"
-                    cols="10"
-                    style="width:600px;height:100px;"
-                    placeholder=" 방을 본 후기를 적어주세요 "
-                    name="content"
-                    class="form-control"
-                  ></textarea>
-                  <br />
-                  <div class="btnn">
-                    <button onclick="review();">등록하기</button>
-                  </div>
+                    <br />
+                    <br />
+                    <br />
 
-                  <br />
-                  <br />
-                  <br />
-
-                  <table class="comment">
-                    <tr>
-                      <th scope="row">믿음님의 후기</th>
-                      <td>
-                        방이 넓고 깨끗합니다. 주인분도 친절하셔서, 마음 편하게
-                        봤네요.
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">재원님의 후기</th>
-                      <td>사진이랑 똑같아요.</td>
-                    </tr>
-                  </table>
-
+                    <table class="comment">
+                      <tr>
+                        <th scope="row">믿음님의 후기</th>
+                        <td>
+                          방이 넓고 깨끗합니다. 주인분도 친절하셔서, 마음 편하게
+                          봤네요.
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">재원님의 후기</th>
+                        <td>사진이랑 똑같아요.</td>
+                      </tr>
+                    </table>
+                  </form>
                   <br />
                   <br />
                 </div>
@@ -244,26 +247,9 @@
     <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
     <!-- Custom js -->
     <script src="js/custom.js"></script>
-    <script>
-      // content, cate, index를 인수로 받아 form 태그로 전송하는 함수
-      function review(content, cate, index = 0) {
-        // name이 paging인 태그
-        // var f = document.paging;
-
-        // // form 태그의 하위 태그 값 매개 변수로 대입
-        // f.content.value = content;
-        // f.cate.value = cate;
-        // f.index.value = index;
-
-        // // input태그의 값들을 전송하는 주소
-        // f.action = "./content.do"
-
-        // // 전송 방식 : post
-        // f.method = "post"
-        // f.submit();
-
-        const review = document.getElementById('review-text').value;
-        // fetch('')
+    <script language="javascript">
+      function showConfirm() {
+        alert('후기가 등록되었습니다.');
       }
     </script>
   </body>

@@ -35,6 +35,7 @@
 #RESPONSIVE DESIGN
 */
 /* BASE - Base tyles, Variables, Mixins, etc. */
+
 .aa-single-field2 textarea {
   border: none;
   border-bottom: 2px solid #ccc;
@@ -49,7 +50,9 @@
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-.aa-single-field2 input[type="text"], .aa-single-field2 input[type="email"],  .aa-single-field2 input[type="password"] {
+.aa-single-field2 input[type='text'],
+.aa-single-field2 input[type='email'],
+.aa-single-field2 input[type='password'] {
   height: 30px;
   margin-bottom: 5px;
   padding: 5px;
@@ -73,7 +76,9 @@
   display: inline-block;
   text-align: left;
 }
-.aa-single-field2 input[type="password"], .aa-single-field2 input[type="text"], .aa-single-field2 input[type="email"] {
+.aa-single-field2 input[type='password'],
+.aa-single-field2 input[type='text'],
+.aa-single-field2 input[type='email'] {
   border: solid black 0.2px;
   color: #555;
   margin-bottom: 10px;

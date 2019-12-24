@@ -92,7 +92,7 @@
             <!-- LOGO -->
             <!-- Text based logo -->
             <a href="index.html"
-              ><img src="img/logo.jpg" width="150" height="150"
+              ><img src="img/logo.jpg" width="120" height="120"
             /></a>
             <!-- Image based logo -->
             <!-- <a class="navbar-brand aa-logo-img" href="index.html"><img src="img/logo.png" alt="logo"></a> -->
@@ -157,17 +157,19 @@
                     />
                     <div id="preview"></div>
                     <br />
-                    <label for="id">주소 <span class="required">*</span></label>
+                    <label for="address"
+                      >주소 <span class="required">*</span></label
+                    >
                     <input
                       type="text"
                       required="required"
                       aria-required="true"
                       value=""
-                      name="userId"
+                      name="userAddress"
                     />
                   </div>
                   <div class="aa-single-field2">
-                    <label for="name"
+                    <label for="roomtype"
                       >매물형태(전세/월세/매매)
                       <span class="required">*</span></label
                     >
@@ -176,23 +178,23 @@
                       required="required"
                       aria-required="true"
                       value=""
-                      name="userName"
+                      name="roomType"
                     />
                   </div>
                   <div class="aa-single-field2">
-                    <label for="text"
+                    <label for="price"
                       >가격(보증금/월세) <span class="required">*</span></label
                     >
-                    <input type="text" name="userPassword" />
+                    <input type="text" name="roomPrice" />
                   </div>
                   <div class="aa-single-field2">
-                    <label for="confirm-password"
+                    <label for="rommfloor"
                       >층수 <span class="required">*</span></label
                     >
-                    <input type="text" name="confirmUserPassword" />
+                    <input type="text" name="roomFloor" />
                   </div>
                   <div class="aa-single-field2">
-                    <label for="email"
+                    <label for="roomarea"
                       >방평수 <span class="required">*</span></label
                     >
                     <input
@@ -200,11 +202,11 @@
                       required="required"
                       aria-required="true"
                       value=""
-                      name="userEmail"
+                      name="roomArea"
                     />
                   </div>
                   <div class="aa-single-field2">
-                    <label for="phone"
+                    <label for="roomnumber"
                       >방개수 <span class="required">*</span></label
                     >
                     <input
@@ -212,7 +214,7 @@
                       required="required"
                       aria-required="true"
                       value=""
-                      name="userPhoneNumber"
+                      name="roomNumber"
                     />
                   </div>
                   <div class="aa-single-submit">
@@ -270,7 +272,7 @@
                 image.src = this.result;
                 preview.appendChild(image);
               },
-              false,
+              false
             );
 
             reader.readAsDataURL(file);
