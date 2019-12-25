@@ -137,9 +137,8 @@
                   <div class="aa-contact-form">
                     <form
                       id="Changinginfo"
-                      form
                       name="Changinginfo"
-                      action="/"
+                     action="/" 
                       method="put"
                     >
                       <p class="comment-form-name">
@@ -212,14 +211,26 @@
                           name="submit"
                           class="aa-browse-btn"
                           value="나의 정보 수정하기"
+                          onclick="showConfirm();"
+
+                          
                         />
                       </p>
+                    </form>
+                    <form
+                      id="secessioninfo"
+                      name="secessioninfo"
+                      action="/"
+                      method="delete"
+                    >
                       <p class="form-secession">
-                        <button>
-                          <a href="secessionDone.html" onclick="secession();"
-                            >회원탈퇴하기</a
-                          >
-                        </button>
+                        <input
+                          type="submit"
+                          name="submit"
+                          class="aa-browse-btn"
+                          value="회원 탈퇴하기"
+                          onClick="location.href='secessionDone.html'"
+                        />
                       </p>
                     </form>
                   </div>
@@ -303,24 +314,12 @@
     <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
     <!-- Custom js -->
     <script src="js/custom.js"></script>
-    <script>
-      // content, cate, index를 인수로 받아 form 태그로 전송하는 함수
-      function secession(content, cate, index = 0) {
-        // name이 paging인 태그
-        var f = document.paging;
-
-        // form 태그의 하위 태그 값 매개 변수로 대입
-        f.content.value = content;
-        f.cate.value = cate;
-        f.index.value = index;
-
-        // input태그의 값들을 전송하는 주소
-        f.action = './content.do';
-
-        // 전송 방식 : post
-        f.method = 'post';
-        f.submit();
+    <script language="javascript">
+      function showConfirm() {
+     
+        alert("회원정보가 수정되었습니다.");
+      
       }
-    </script>
+      </script>
   </body>
 </html>
