@@ -6,3 +6,6 @@ package-lock.json
 
 #config.json
 config/config.json
+
+#sessions
+sessions
