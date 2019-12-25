@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>메인페이지</title>
+    <title>매물정보</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
@@ -82,6 +82,7 @@
         </div>
       </div>
     </header>
+
     <!-- End header section -->
     <!-- Start menu section -->
     <section id="aa-menu-area">
@@ -117,128 +118,118 @@
         <div class="row">
           <div class="col-md-12">
             <div class="aa-property-header-inner">
-              <h2>중개자 없이 방을 구하세요</h2>
-              <a>메타 마스크가 필요합니다.</a>
+              <h2>매물 정보</h2>
             </div>
           </div>
         </div>
       </div>
     </section>
     <!-- End Proerty header  -->
-
     <!-- Start Properties  -->
     <section id="aa-properties">
       <div class="container">
         <div class="row">
           <div class="col-md-8">
             <div class="aa-properties-content">
-              <!-- start properties content head -->
-              <div class="aa-properties-content-head">
-                <div class="aa-properties-content-head-left">
-                  <h2>방 등록하기</h2>
-                </div>
-                <div class="aa-properties-content-head-right"></div>
-              </div>
               <!-- Start properties content body -->
-              <div class="aa-properties-content-body">
-                <form
-                  name="registerform"
-                  action="/properties-register"
-                  method="post"
-                >
-                  <div class="aa-single-field2">
-                    <br />
-                    <label for="text">방 사진 첨부하기</label>
-                    <input
-                      id="browse"
-                      type="file"
-                      onchange="previewFiles()"
-                      multiple
-                    />
-                    <div id="preview"></div>
-                    <br />
-                    <label for="address"
-                      >주소 <span class="required">*</span></label
-                    >
-                    <input
-                      type="text"
-                      required="required"
-                      aria-required="true"
-                      value=""
-                      name="userAddress"
-                    />
+              <div class="aa-properties-details">
+                <div class="aa-properties-details-img">
+                  <img src="img/img2.jpg" alt="img" />
+                </div>
+                <div class="properties">
+                  <hr />
+                  <h2>조용한 주택가 입니다.</h2>
+                  <hr />
+                  <div class="wave">
+                    <a href="membershipInfoRe.html">찜하기 </a>
                   </div>
-                  <div class="aa-single-field2">
-                    <label for="roomtype"
-                      >매물형태(전세/월세/매매)
-                      <span class="required">*</span></label
-                    >
-                    <input
-                      type="text"
-                      required="required"
-                      aria-required="true"
-                      value=""
-                      name="roomType"
-                    />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <div class="wave2">
+                    <a href="contact.html">계약 신청</a>
                   </div>
-                  <div class="aa-single-field2">
-                    <label for="price"
-                      >가격(보증금/월세) <span class="required">*</span></label
-                    >
-                    <input type="text" name="roomPrice" />
-                  </div>
-                  <div class="aa-single-field2">
-                    <label for="rommfloor"
-                      >층수 <span class="required">*</span></label
-                    >
-                    <input type="text" name="roomFloor" />
-                  </div>
-                  <div class="aa-single-field2">
-                    <label for="roomarea"
-                      >방평수 <span class="required">*</span></label
-                    >
-                    <input
-                      type="text"
-                      required="required"
-                      aria-required="true"
-                      value=""
-                      name="roomArea"
-                    />
-                  </div>
-                  <div class="aa-single-field2">
-                    <label for="roomnumber"
-                      >방개수 <span class="required">*</span></label
-                    >
-                    <input
-                      type="text"
-                      required="required"
-                      aria-required="true"
-                      value=""
-                      name="roomNumber"
-                    />
-                  </div>
-                  <div class="aa-single-submit">
-                    <input
-                      type="submit"
-                      value="등록하기"
-                      onclick="showConfirm();"
-                    />
-                  </div>
-                </form>
+                  <hr />
+                  <h3>상세 정보</h3>
+                  <ul>
+                    <li>매물번호:DBH1234</li>
+                    <li>주소:서울시 금천구 독산동 100</li>
+                    <li>집주인 연락처:010-5-435555(클릭하면 전화가능)</li>
+                    <li>옵션:풀옵션</li>
+                    <li>가격: 백만원</li>
+                    <li>방개수: 1개</li>
+                    <li>매물형태:전세 /월세</li>
+                  </ul>
+                  <hr />
+                  <h3>지도</h3>
+                  <br />
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6851.201919469417!2d-86.11773906635584!3d33.47324776828677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x888bdb60cc49c571%3A0x40451ca6baf275c7!2s36008+AL-77%2C+Talladega%2C+AL+35160%2C+USA!5e0!3m2!1sbn!2sbd!4v1460452919256"
+                    width="100%"
+                    height="450"
+                    frameborder="0"
+                    style="border:0"
+                    allowfullscreen
+                  ></iframe>
+                  <hr />
+                </div>
               </div>
+              <main3>
+                <div class="main-box3">
+                  <br />
+                  <select id="example">
+                    <option value="1">★★★★★</option>
+                    <option value="2">★★★★☆</option>
+                    <option value="3">★★★☆☆</option>
+                    <option value="4">★★☆☆☆</option>
+                    <option value="5">★☆☆☆☆</option>
+                  </select>
+                  <form name="review-form" method="post">
+                    <br /><br />
+                    <td><h3>후기를 적어주세요.</h3></td>
+                    <td></td>
+                    <textarea
+                      id="review-text"
+                      cols="10"
+                      style="width:600px;height:100px;"
+                      placeholder=" 방을 본 후기를 적어주세요 "
+                      name="content"
+                      class="form-control"
+                    ></textarea>
+                    <br />
+                    <div class="reviewbtn">
+                      <input
+                        type="submit"
+                        value="등록하기"
+                        onclick="showConfirm();"
+                      />
+                    </div>
+
+                    <br />
+                    <br />
+                    <br />
+
+                    <table class="comment">
+                      <tr>
+                        <th scope="row">믿음님의 후기</th>
+                        <td>
+                          방이 넓고 깨끗합니다. 주인분도 친절하셔서, 마음 편하게
+                          봤네요.
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">재원님의 후기</th>
+                        <td>사진이랑 똑같아요.</td>
+                      </tr>
+                    </table>
+                  </form>
+                  <br />
+                  <br />
+                </div>
+              </main3>
             </div>
           </div>
-          <!-- Start properties sidebar -->
         </div>
       </div>
     </section>
-
-    <!-- / Properties  -->
-
-    <!-- Footer -->
-    <footer></footer>
-    <!-- / Footer -->
-
     <!-- jQuery library -->
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
     <script src="js/jquery.min.js"></script>
@@ -254,40 +245,9 @@
     <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
     <!-- Custom js -->
     <script src="js/custom.js"></script>
-    <script type="text/javascript">
-      function previewFiles() {
-        var preview = document.querySelector('#preview');
-        var files = document.querySelector('input[type=file]').files;
-
-        function readAndPreview(file) {
-          if (/\.(jpe?g|png|gif)$/i.test(file.name)) {
-            var reader = new FileReader();
-
-            reader.addEventListener(
-              'load',
-              function() {
-                var image = new Image();
-                image.height = 100;
-                image.title = file.name;
-                image.src = this.result;
-                preview.appendChild(image);
-              },
-              false
-            );
-
-            reader.readAsDataURL(file);
-          }
-        }
-
-        if (files) {
-          [].forEach.call(files, readAndPreview);
-        }
-      }
-    </script>
-
     <script language="javascript">
       function showConfirm() {
-        alert('매물이 등록되었습니다.');
+        alert('후기가 등록되었습니다.');
       }
     </script>
   </body>
