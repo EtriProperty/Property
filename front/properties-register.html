@@ -72,8 +72,8 @@
                 <div class="col-md-6 col-sm-6 col-xs-6"></div>
                 <div class="col-md-6 col-sm-6 col-xs-6">
                   <div class="aa-header-right">
-                    <a href="register.html" class="aa-register">회원가입</a>
-                    <a href="signin.html" class="aa-login">로그인</a>
+                    <a>user님 환영합니다!</a>
+                    <a href="index.html">로그아웃</a>
                   </div>
                 </div>
               </div>
@@ -141,11 +141,7 @@
               </div>
               <!-- Start properties content body -->
               <div class="aa-properties-content-body">
-                <form
-                  name="registerform"
-                  action="/properties-register"
-                  method="post"
-                >
+                <form name="registerform" action="/roomRegister" method="post">
                   <div class="aa-single-field2">
                     <br />
                     <label for="text">방 사진 첨부하기</label>
@@ -219,7 +215,7 @@
                   </div>
                   <div class="aa-single-submit">
                     <input
-                      type="button"
+                      type="submit"
                       value="등록하기"
                       onclick="showConfirm();"
                     />
