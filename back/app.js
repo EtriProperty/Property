@@ -20,6 +20,15 @@ app.engine("html", require("ejs").renderFile);
 app.set("view engine", "ejs");
 app.set("views", __dirname + "/views");
 
+app.use(
+  session({
+    secret: passportkey.secret,
+    resave: false,
+    saveUninititallized: true,
+    store: new FileStore()
+  })
+);
+
 app.use("/login", loginRouter); //로그인 api
 app.use("/register", registerRouter); //회원가입 api
 app.use("/mywishlist", mywishlist);
