@@ -26,10 +26,10 @@ router.post("/login_on", async function(req, res, next) {
   if (dbPassword === hashPassword) {
     req.session.logined = true;
     req.session.userid = body1.userid;
-    res.redirect("index");
+    res.redirect("/");
   } else {
     // 비밀번호불일치
-    res.redirect("index");
+    res.redirect("/");
   }
 });
 
