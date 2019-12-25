@@ -1,10 +1,10 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>매물등록r</title>
+    <title>메인페이지</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
@@ -53,34 +53,119 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
-    <form id="aa-signin" form name="registerform" action="/properties-register" method="post">
+  <body class="aa-price-range">
+    <!-- Pre Loader -->
+    <div id="aa-preloader-area">
+      <div class="pulse"></div>
+    </div>
+    <!-- SCROLL TOP BUTTON -->
+    <a class="scrollToTop" href="#"><i class="fa fa-angle-double-up"></i></a>
+    <!-- END SCROLL TOP BUTTON -->
+
+    <!-- Start header section -->
+    <header id="aa-header">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <div class="aa-signin-area">
-              <div class="aa-signin-form">
-                <div class="aa-signin-form-title">
-                  <a class="aa-property-home" href="index.html"
-                    ><img src="img/logo2.jpg" width="300" height="300" />
-                  </a>
-                  <br />
-                  <input /> <button>이미지첨부하기</button>
+            <div class="aa-header-area">
+              <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-6"></div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                  <div class="aa-header-right">
+                    <a>user님 환영합니다!</a>
+                    <a href="index.html">로그아웃</a>
+                  </div>
                 </div>
-                <form class="contactform">
-                  <div class="aa-single-field">
-                    <label for="id">주소 <span class="required">*</span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- End header section -->
+    <!-- Start menu section -->
+    <section id="aa-menu-area">
+      <nav class="navbar navbar-default main-navbar" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
+            <!-- LOGO -->
+            <!-- Text based logo -->
+            <a href="index.html"
+              ><img src="img/logo.jpg" width="120" height="120"
+            /></a>
+            <!-- Image based logo -->
+            <!-- <a class="navbar-brand aa-logo-img" href="index.html"><img src="img/logo.png" alt="logo"></a> -->
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
+              <li><a href="properties.html">매물찾기</a></li>
+              <li><a href="properties-register.html">매물등록</a></li>
+              <li><a href="[mp]myWishList.html">마이페이지</a></li>
+            </ul>
+          </div>
+          <!--/.nav-collapse -->
+        </div>
+      </nav>
+    </section>
+    <!-- End menu section -->
+
+    <!-- Start Proerty header  -->
+
+    <section id="aa-property-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="aa-property-header-inner">
+              <h2>중개자 없이 방을 구하세요</h2>
+              <a>메타 마스크가 필요합니다.</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Proerty header  -->
+
+    <!-- Start Properties  -->
+    <section id="aa-properties">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="aa-properties-content">
+              <!-- start properties content head -->
+              <div class="aa-properties-content-head">
+                <div class="aa-properties-content-head-left">
+                  <h2>방 등록하기</h2>
+                </div>
+                <div class="aa-properties-content-head-right"></div>
+              </div>
+              <!-- Start properties content body -->
+              <div class="aa-properties-content-body">
+                <form name="registerform" action="/roomRegister" method="post">
+                  <div class="aa-single-field2">
+                    <br />
+                    <label for="text">방 사진 첨부하기</label>
+                    <input
+                      id="browse"
+                      type="file"
+                      onchange="previewFiles()"
+                      multiple
+                    />
+                    <div id="preview"></div>
+                    <br />
+                    <label for="address"
+                      >주소 <span class="required">*</span></label
                     >
                     <input
                       type="text"
                       required="required"
                       aria-required="true"
                       value=""
-                      name="userId"
+                      name="userAddress"
                     />
                   </div>
-                  <div class="aa-single-field">
-                    <label for="name"
+                  <div class="aa-single-field2">
+                    <label for="roomtype"
                       >매물형태(전세/월세/매매)
                       <span class="required">*</span></label
                     >
@@ -89,23 +174,23 @@
                       required="required"
                       aria-required="true"
                       value=""
-                      name="userName"
+                      name="roomType"
                     />
                   </div>
-                  <div class="aa-single-field">
-                    <label for="text"
+                  <div class="aa-single-field2">
+                    <label for="price"
                       >가격(보증금/월세) <span class="required">*</span></label
                     >
-                    <input type="text" name="userPassword" />
+                    <input type="text" name="roomPrice" />
                   </div>
-                  <div class="aa-single-field">
-                    <label for="confirm-password"
+                  <div class="aa-single-field2">
+                    <label for="rommfloor"
                       >층수 <span class="required">*</span></label
                     >
-                    <input type="text" name="confirmUserPassword" />
+                    <input type="text" name="roomFloor" />
                   </div>
-                  <div class="aa-single-field">
-                    <label for="email"
+                  <div class="aa-single-field2">
+                    <label for="roomarea"
                       >방평수 <span class="required">*</span></label
                     >
                     <input
@@ -113,11 +198,11 @@
                       required="required"
                       aria-required="true"
                       value=""
-                      name="userEmail"
+                      name="roomArea"
                     />
                   </div>
-                  <div class="aa-single-field">
-                    <label for="phone"
+                  <div class="aa-single-field2">
+                    <label for="roomnumber"
                       >방개수 <span class="required">*</span></label
                     >
                     <input
@@ -125,33 +210,30 @@
                       required="required"
                       aria-required="true"
                       value=""
-                      name="userPhoneNumber"
+                      name="roomNumber"
                     />
                   </div>
-                  <div class="aa-single-field">
-                    <label for="opt"
-                      >옵션 <span class="required">*</span>
-                      <br>
-                  <label
-                    ><input type="checkbox" name="color" value="Desk" />
-                    책상</label
-                  >
-                  <label>
-                    <input type="checkbox" name="color" value="Desk" />
-                    의자</label
-                  >
-                
-
                   <div class="aa-single-submit">
-                    <input type="submit" value="등록" name="submit" />
+                    <input
+                      type="submit"
+                      value="등록하기"
+                      onclick="showConfirm();"
+                    />
                   </div>
                 </form>
               </div>
             </div>
           </div>
+          <!-- Start properties sidebar -->
         </div>
       </div>
     </section>
+
+    <!-- / Properties  -->
+
+    <!-- Footer -->
+    <footer></footer>
+    <!-- / Footer -->
 
     <!-- jQuery library -->
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
@@ -168,5 +250,37 @@
     <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
     <!-- Custom js -->
     <script src="js/custom.js"></script>
+    <script type="text/javascript">
+      function previewFiles() {
+        var preview = document.querySelector("#preview");
+        var files = document.querySelector("input[type=file]").files;
+        function readAndPreview(file) {
+          if (/\.(jpe?g|png|gif)$/i.test(file.name)) {
+            var reader = new FileReader();
+            reader.addEventListener(
+              "load",
+              function() {
+                var image = new Image();
+                image.height = 100;
+                image.title = file.name;
+                image.src = this.result;
+                preview.appendChild(image);
+              },
+              false
+            );
+            reader.readAsDataURL(file);
+          }
+        }
+        if (files) {
+          [].forEach.call(files, readAndPreview);
+        }
+      }
+    </script>
+
+    <script language="javascript">
+      function showConfirm() {
+        alert("매물이 등록되었습니다.");
+      }
+    </script>
   </body>
 </html>
