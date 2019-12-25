@@ -73,7 +73,9 @@
                 <div class="col-md-6 col-sm-6 col-xs-6">
                   <div class="aa-header-right">
                     <a>user님 환영합니다!</a>
-                    <a href="index.html">로그아웃</a>
+                    <form name="logoutform" action="/logout" method="get">
+                      <input type="submit" value="로그아웃" name="Logout" />
+                    </form>
                   </div>
                 </div>
               </div>
@@ -182,7 +184,11 @@
                     <option value="4">★★☆☆☆</option>
                     <option value="5">★☆☆☆☆</option>
                   </select>
-                  <form name="review-form" method="post">
+                  <form
+                    name="review-form"
+                    action="/homepage/reply"
+                    method="post"
+                  >
                     <br /><br />
                     <td><h3>후기를 적어주세요.</h3></td>
                     <td></td>
