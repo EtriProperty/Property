@@ -4,10 +4,10 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Home Property | Signin</title>
+    <title>로그인하기</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="img/logo.jpg" type="image/x-icon" />
 
     <!-- Font awesome -->
     <link href="css/font-awesome.css" rel="stylesheet" />
@@ -62,47 +62,40 @@
               <div class="aa-signin-form">
                 <div class="aa-signin-form-title">
                   <a class="aa-property-home" href="index.html"
-                    >Property Home</a
-                  >
-                  <h4>Sign in to your account</h4>
+                    ><img src="img/logo.jpg" width="300" height="300" />
+                    <br /><br />
+                  </a>
                 </div>
-                <form
-                  class="contactform"
-                  action="/login/login_on"
-                  method="post"
-                >
+                <form name="loginform" action="login/login_on" method="post">
+                  <!-- 수정 -->
                   <div class="aa-single-field">
-                    <label for="email"
-                      >Email <span class="required">*</span></label
+                    <label for="id"
+                      >아이디 <span class="required">*</span></label
                     >
                     <input
-                      type="email"
+                      type="text"
                       required="required"
                       aria-required="true"
                       value=""
-                      name="email"
+                      name="userid"
+                      <!--
+                      수정
+                      --
                     />
                   </div>
                   <div class="aa-single-field">
                     <label for="password"
-                      >Password <span class="required">*</span></label
+                      >비밀번호 <span class="required">*</span></label
                     >
                     <input type="password" name="password" />
-                  </div>
-                  <div class="aa-single-field">
-                    <label> <input type="checkbox" /> Remember me </label>
                   </div>
                   <div class="aa-single-submit">
                     <input
                       type="submit"
-                      value="Send Message"
+                      value="Login"
                       class="aa-browse-btn"
                       name="submit"
                     />
-                    <p>
-                      Don't Have A Account Yet?
-                      <a href="register.html">CREATE NOW!</a>
-                    </p>
                   </div>
                 </form>
               </div>

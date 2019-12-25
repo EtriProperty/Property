@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>회원가입하기</title>
+    <title>매물등록r</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
@@ -54,7 +54,7 @@
     <![endif]-->
   </head>
   <body>
-    <section id="aa-signin">
+    <form id="aa-signin" form name="registerform" action="/properties-register" method="post">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -64,79 +64,86 @@
                   <a class="aa-property-home" href="index.html"
                     ><img src="img/logo2.jpg" width="300" height="300" />
                   </a>
+                  <br />
+                  <input /> <button>이미지첨부하기</button>
                 </div>
-                <form
-                  name="registerform"
-                  action="/register/register_on"
-                  method="post"
-                >
-                  <!--수정-->
+                <form class="contactform">
                   <div class="aa-single-field">
-                    <label for="id">
-                      아이디 <span class="required">*</span></label
-                    >
+                    <label for="id">주소 <span class="required">*</span></label>
                     >
                     <input
                       type="text"
                       required="required"
                       aria-required="true"
                       value=""
-                      name="userid"
-                    /><!--위 name 수정-->
+                      name="userId"
+                    />
                   </div>
                   <div class="aa-single-field">
                     <label for="name"
-                      >이름 <span class="required">*</span></label
+                      >매물형태(전세/월세/매매)
+                      <span class="required">*</span></label
                     >
                     <input
                       type="text"
                       required="required"
                       aria-required="true"
                       value=""
-                      name="username"
-                    /><!--수정-->
+                      name="userName"
+                    />
                   </div>
                   <div class="aa-single-field">
-                    <label for="password"
-                      >비밀번호 <span class="required">*</span></label
+                    <label for="text"
+                      >가격(보증금/월세) <span class="required">*</span></label
                     >
-                    <input type="password" name="userpassword" /><!--수정-->
+                    <input type="text" name="userPassword" />
                   </div>
                   <div class="aa-single-field">
                     <label for="confirm-password"
-                      >비밀번호 확인 <span class="required">*</span></label
+                      >층수 <span class="required">*</span></label
                     >
-                    <input
-                      type="password"
-                      name="confirmuserpassword"
-                    /><!--수정-->
+                    <input type="text" name="confirmUserPassword" />
                   </div>
                   <div class="aa-single-field">
                     <label for="email"
-                      >이메일 <span class="required">*</span></label
-                    >
-                    <input
-                      type="email"
-                      required="required"
-                      aria-required="true"
-                      value=""
-                      name="useremail"
-                    /><!--수정-->
-                  </div>
-                  <div class="aa-single-field">
-                    <label for="phone"
-                      >전화번호 <span class="required">*</span></label
+                      >방평수 <span class="required">*</span></label
                     >
                     <input
                       type="text"
                       required="required"
                       aria-required="true"
                       value=""
-                      name="userphonenumber"
-                    /><!--수정-->
+                      name="userEmail"
+                    />
                   </div>
+                  <div class="aa-single-field">
+                    <label for="phone"
+                      >방개수 <span class="required">*</span></label
+                    >
+                    <input
+                      type="text"
+                      required="required"
+                      aria-required="true"
+                      value=""
+                      name="userPhoneNumber"
+                    />
+                  </div>
+                  <div class="aa-single-field">
+                    <label for="opt"
+                      >옵션 <span class="required">*</span>
+                      <br>
+                  <label
+                    ><input type="checkbox" name="color" value="Desk" />
+                    책상</label
+                  >
+                  <label>
+                    <input type="checkbox" name="color" value="Desk" />
+                    의자</label
+                  >
+                
+
                   <div class="aa-single-submit">
-                    <input type="submit" value="가입" name="submit" />
+                    <input type="submit" value="등록" name="submit" />
                   </div>
                 </form>
               </div>
