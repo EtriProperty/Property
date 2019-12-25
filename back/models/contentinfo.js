@@ -19,33 +19,13 @@ module.exports = function(sequelize, DataTypes) {
           key: "number"
         }
       },
-      pricedep: {
-        type: DataTypes.INTEGER(11),
-        allowNull: true
-      },
-      pricemon: {
-        type: DataTypes.INTEGER(11),
-        allowNull: true
-      },
       price: {
-        type: DataTypes.INTEGER(11),
+        type: DataTypes.STRING(45),
         allowNull: true
       },
-      htime: {
-        type: DataTypes.DATE,
-        allowNull: true
-      },
-      priceway: {
+      roomtype: {
         type: DataTypes.STRING(45),
         allowNull: false
-      },
-      optiondesk: {
-        type: DataTypes.TEXT,
-        allowNull: true
-      },
-      optionchair: {
-        type: DataTypes.TEXT,
-        allowNull: true
       },
       roomcount: {
         type: DataTypes.STRING(45),
@@ -61,6 +41,10 @@ module.exports = function(sequelize, DataTypes) {
       },
       date: {
         type: DataTypes.DATEONLY,
+        allowNull: false
+      },
+      address: {
+        type: DataTypes.STRING(200),
         allowNull: false
       }
     },
