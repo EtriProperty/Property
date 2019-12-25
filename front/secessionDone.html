@@ -53,6 +53,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
+
   <body>
     <section id="aa-signin">
       <div class="container">
@@ -61,11 +62,11 @@
             <div class="aa-signin-area">
               <div class="aa-signin-form">
                 <div class="aa-signin-form-title">
-                  <a class="aa-property-home" href="index.html">
+                  <a class="aa-property-home" href="signin.html">
                     <img src="img/logo2.jpg" width="300" height="300" />
                   </a>
                   <h1>회원탈퇴완료!</h1>
-                  <a>로고를 누르면 메인페이지로 돌아갑니다.</a>
+                  <h4>3초후 메인페이지로 이동합니다</h4>
                 </div>
               </div>
             </div>
@@ -89,5 +90,19 @@
     <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
     <!-- Custom js -->
     <script src="js/custom.js"></script>
+    <script>
+      setTimeout(function() {
+        window.location.href = 'index.html';
+      }, 3000);
+
+      var time1 = 2;
+      setInterval(function() {
+        var timeSet = document.querySelector('h4');
+
+        timeSet.innerText = `${time1}초후 메인페이지로 이동합니다`;
+
+        time1--;
+      }, 1000);
+    </script>
   </body>
 </html>
