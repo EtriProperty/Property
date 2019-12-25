@@ -7,8 +7,6 @@ router.post("/register_on", async (req, res) => {
   const body1 = req.body;
   const id = body1.userid;
 
-  console.log(body1);
-  console.log(id);
   let result = await userinfo.findAll({
     where: {
       id: id
@@ -32,7 +30,7 @@ router.post("/register_on", async (req, res) => {
       auth: 1,
       salt: salt
     });
-    res.redirect("/registerDone.html");
+    res.render("registerDone.html");
   } else {
     //아이디가 이미 있을때, 409 에러 던져줌
     //원하는건 에러를 던져주면서 리다이렉트하는거, res.json 해서 메시지전송하면서 redirect하면 오류남
