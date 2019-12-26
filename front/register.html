@@ -142,7 +142,11 @@
               </div>
               <!-- Start properties content body -->
               <div class="aa-properties-content-body"></div>
-              <form name="registerform" action="/register" method="post">
+              <form
+                name="registerform"
+                action="register/register_on"
+                method="post"
+              >
                 <div class="aa-single-field2">
                   <label for="id">아이디 <span class="required">*</span></label>
                   <input
@@ -150,7 +154,7 @@
                     required="required"
                     aria-required="true"
                     value=""
-                    name="userId"
+                    name="userid"
                   />
                 </div>
                 <div class="aa-single-field2">
@@ -162,7 +166,7 @@
                     required="required"
                     aria-required="true"
                     value=""
-                    name="userPassword"
+                    name="userpassword"
                   />
                 </div>
                 <div class="aa-single-field2">
@@ -174,12 +178,12 @@
                     required="required"
                     aria-required="true"
                     value=""
-                    name="confirmPassword"
+                    name="confirmuserpassword"
                   />
                 </div>
                 <div class="aa-single-field2">
                   <label for="name">이름 <span class="required">*</span></label>
-                  <input type="text" name="userName" />
+                  <input type="text" name="username" />
                 </div>
                 <div class="aa-single-field2">
                   <label for="email"
@@ -190,7 +194,7 @@
                     required="required"
                     aria-required="true"
                     value=""
-                    name="userEmail"
+                    name="useremail"
                   />
                 </div>
                 <div class="aa-single-field2">
@@ -202,7 +206,7 @@
                     required="required"
                     aria-required="true"
                     value=""
-                    name="userPhoneNumber"
+                    name="userphonenumber"
                   />
                 </div>
                 <div class="aa-single-submit">

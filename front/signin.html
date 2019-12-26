@@ -142,7 +142,7 @@
               </div>
               <!-- Start properties content body -->
               <div class="aa-properties-content-body"></div>
-              <form name="registerform" action="login/login_on" method="post">
+              <form name="loginform" action="login/login_on" method="post">
                 <div class="aa-single-field2">
                   <label for="id">아이디 </label>
                   <input
@@ -150,7 +150,7 @@
                     required="required"
                     aria-required="true"
                     value=""
-                    name="userId"
+                    name="userid"
                   />
                 </div>
                 <div class="aa-single-field2">
@@ -160,11 +160,12 @@
                     required="required"
                     aria-required="true"
                     value=""
-                    name="userPassword"
+                    name="password"
                   />
                 </div>
                 <div class="aa-single-submit">
                   <input
+                    name="submit"
                     type="submit"
                     value="로그인"
                     onclick="showConfirm();"
