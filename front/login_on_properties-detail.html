@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>매물정보</title>
+    <title>디방 중개자없이 방구하자!</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
@@ -208,7 +208,12 @@
                         onclick="showConfirm();"
                       />
                     </div>
-
+                  </form>
+                  <form
+                    name="review-form"
+                    action="/homepage/replydelete"
+                    method="delete"
+                  >
                     <br />
                     <br />
                     <br />
@@ -226,6 +231,18 @@
                         <td>사진이랑 똑같아요.</td>
                       </tr>
                     </table>
+
+                    <br />
+                    <br />
+                    <br />
+
+                    <div class="reviewbtn">
+                      <input
+                        type="submit"
+                        value="삭제하기"
+                        onclick="showConfirm2();"
+                      />
+                    </div>
                   </form>
                   <br />
                   <br />
@@ -254,6 +271,11 @@
     <script language="javascript">
       function showConfirm() {
         alert('후기가 등록되었습니다.');
+      }
+    </script>
+    <script language="javascript">
+      function showConfirm2() {
+        alert('후기가 삭제되었습니다.');
       }
     </script>
   </body>
