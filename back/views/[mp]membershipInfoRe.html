@@ -72,8 +72,8 @@
                 <div class="col-md-6 col-sm-6 col-xs-6"></div>
                 <div class="col-md-6 col-sm-6 col-xs-6">
                   <div class="aa-header-right">
-                    <form name="register" method="get" action="register.html">회원가입</form>
-                    <form name="signIn" method="get" action="signin.html">로그인</form>
+                    <p>환영합니다! |</p>
+                    <a href="index.html" class="aa-logout">로그아웃</a>
                   </div>
                 </div>
               </div>
@@ -99,9 +99,25 @@
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
-              <li><form name="roomFind" method="get" action="properties.html">매물찾기</form></li>
-              <li><form name="roomRegist" method="get" action="properties-register.html">매물등록</form></li>
-              <li><form name="myPage" method="get" action="[mp]myWishList.html">마이페이지</form></li>
+              <li>
+                <form name="roomFind" method="get" action="properties.html">
+                  매물찾기
+                </form>
+              </li>
+              <li>
+                <form
+                  name="roomRegist"
+                  method="get"
+                  action="properties-register.html"
+                >
+                  매물등록
+                </form>
+              </li>
+              <li>
+                <form name="myPage" method="get" action="[mp]myWishList.html">
+                  마이페이지
+                </form>
+              </li>
             </ul>
           </div>
           <!--/.nav-collapse -->
@@ -138,7 +154,7 @@
                     <form
                       id="Changinginfo"
                       name="Changinginfo"
-                     action="/myPage/infoChange" 
+                      action="/myPage/infoChange"
                       method="put"
                     >
                       <p class="comment-form-name">
@@ -212,8 +228,6 @@
                           class="aa-browse-btn"
                           value="나의 정보 수정하기"
                           onclick="showConfirm();"
-
-                          
                         />
                       </p>
                     </form>
@@ -316,10 +330,9 @@
     <script src="js/custom.js"></script>
     <script language="javascript">
       function showConfirm() {
-     
-        alert("회원정보가 수정되었습니다.");
-      
+        alert('회원정보가 수정되었습니다.');
       }
-      </script>
+    </script>
+    <script src="../public/js/custom.js"></script>
   </body>
 </html>
