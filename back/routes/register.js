@@ -43,6 +43,10 @@ router.post("/register_on", async (req, res) => {
   }
 });
 
+router.get("/signin", (req, res) => {
+  res.render("signin.html");
+});
+
 /* GET register page. */
 router.get("/", (req, res) => {
   res.render("register.html");
