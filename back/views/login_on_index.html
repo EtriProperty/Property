@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>메인페이지</title>
+    <title>디방 중개자없이 방구하자!</title>
 
     <!-- Favicon -->
     <!-- <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"> -->
@@ -64,8 +64,10 @@
                 <div class="col-md-6 col-sm-6 col-xs-6"></div>
                 <div class="col-md-6 col-sm-6 col-xs-6">
                   <div class="aa-header-right">
-                    <a href="/register" class="aa-register">회원가입</a>
-                    <a href="/login" class="aa-login">로그인</a>
+                    <a>user님 환영합니다!</a>
+                    <form name="logoutform" action="/logout" method="get">
+                      <input type="submit" value="로그아웃" name="Logout" />
+                    </form>
                   </div>
                 </div>
               </div>
@@ -91,9 +93,9 @@
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
-              <li><a href="/properties">매물찾기</a></li>
-              <li><a href="/properties-register">매물등록</a></li>
-              <li><a href="/[mp]myWishList">마이페이지</a></li>
+              <li><a href="properties.html">매물찾기</a></li>
+              <li><a href="properties-register.html">매물등록</a></li>
+              <li><a href="[mp]myWishList.html">마이페이지</a></li>
             </ul>
           </div>
           <!--/.nav-collapse -->
@@ -136,7 +138,6 @@
                 </div>
               </div>
               <!-- Start properties content body -->
-              <form name="listform" action="home/popularList" method="post">
               <div class="aa-properties-content-body">
                 <ul class="aa-properties-nav">
                   <li>

@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>메인페이지</title>
+    <title>디방 중개자없이 방구하자!</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
@@ -252,13 +252,15 @@
     <script src="js/custom.js"></script>
     <script type="text/javascript">
       function previewFiles() {
-        var preview = document.querySelector("#preview");
-        var files = document.querySelector("input[type=file]").files;
+        var preview = document.querySelector('#preview');
+        var files = document.querySelector('input[type=file]').files;
+
         function readAndPreview(file) {
           if (/\.(jpe?g|png|gif)$/i.test(file.name)) {
             var reader = new FileReader();
+
             reader.addEventListener(
-              "load",
+              'load',
               function() {
                 var image = new Image();
                 image.height = 100;
@@ -268,9 +270,11 @@
               },
               false
             );
+
             reader.readAsDataURL(file);
           }
         }
+
         if (files) {
           [].forEach.call(files, readAndPreview);
         }
@@ -279,7 +283,7 @@
 
     <script language="javascript">
       function showConfirm() {
-        alert("매물이 등록되었습니다.");
+        alert('매물이 등록되었습니다.');
       }
     </script>
   </body>

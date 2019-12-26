@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>디방 중개자없이 방구하자!</title>
+    <title>완료된 계약목록</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
@@ -72,8 +72,8 @@
                 <div class="col-md-6 col-sm-6 col-xs-6"></div>
                 <div class="col-md-6 col-sm-6 col-xs-6">
                   <div class="aa-header-right">
-                    <a href="register.html" class="aa-register">회원가입</a>
-                    <a href="signin.html" class="aa-login">로그인</a>
+                    <form name="register" method="get" action="register.html">회원가입</form>
+                    <form name="signIn" method="get" action="signin.html">로그인</form>
                   </div>
                 </div>
               </div>
@@ -83,7 +83,6 @@
       </div>
     </header>
     <!-- End header section -->
-
     <!-- Start menu section -->
     <section id="aa-menu-area">
       <nav class="navbar navbar-default main-navbar" role="navigation">
@@ -93,16 +92,16 @@
             <!-- LOGO -->
             <!-- Text based logo -->
             <a href="index.html"
-              ><img src="img/logo.jpg" width="120" height="120"
+              ><img src="img/logo.jpg" width="150" height="150"
             /></a>
             <!-- Image based logo -->
             <!-- <a class="navbar-brand aa-logo-img" href="index.html"><img src="img/logo.png" alt="logo"></a> -->
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
-              <li><a href="properties.html">매물찾기</a></li>
-              <li><a href="properties-register.html">매물등록</a></li>
-              <li><a href="[mp]myWishList.html">마이페이지</a></li>
+              <li><form name="roomFind" method="get" action="properties.html">매물찾기</form></li>
+              <li><form name="roomRegist" method="get" action="properties-register.html">매물등록</form></li>
+              <li><form name="myPage" method="get" action="[mp]myWishList.html">마이페이지</form></li>
             </ul>
           </div>
           <!--/.nav-collapse -->
@@ -133,56 +132,95 @@
         <div class="row">
           <div class="col-md-8">
             <div class="aa-properties-content">
-              <!-- start properties content head -->
-              <div class="aa-properties-content-head">
-                <div class="aa-properties-content-head-left">
-                  <h2>로그인</h2>
-                </div>
-                <div class="aa-properties-content-head-right"></div>
-              </div>
               <!-- Start properties content body -->
-              <div class="aa-properties-content-body"></div>
-              <form name="loginform" action="login/login_on" method="post">
-                <div class="aa-single-field2">
-                  <label for="id">아이디 </label>
-                  <input
-                    type="text"
-                    required="required"
-                    aria-required="true"
-                    value=""
-                    name="userid"
-                  />
+              <div class="aa-properties-details">
+                <div class="contents-wrap">
+                  <div class="content">
+                    <div class="content-waiting">
+                      <h3>완료된 계약</h3>
+                    </div>
+                    <div class="content-table">
+                      <table>
+                        <tr>
+                          <th>매물번호</th>
+                          <td>roomList.num</td>
+                        </tr>
+                        <tr>
+                          <th>날짜</th>
+                          <td>roomList.date</td>
+                        </tr>
+                        <tr>
+                          <th>집주소</th>
+                          <td>서울특별시 서초구 서초동 100</td>
+                        </tr>
+                        <tr>
+                          <th>집가격</th>
+                          <td>500/30</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
                 </div>
-                <div class="aa-single-field2">
-                  <label for="password">비밀번호</label>
-                  <input
-                    type="password"
-                    required="required"
-                    aria-required="true"
-                    value=""
-                    name="password"
-                  />
-                </div>
-                <div class="aa-single-submit">
-                  <input
-                    name="submit"
-                    type="submit"
-                    value="로그인"
-                    onclick="showConfirm();"
-                    name="submit"
-                  />
-                </div>
-              </form>
+              </div>
             </div>
           </div>
           <!-- Start properties sidebar -->
+          <div class="col-md-4">
+            <aside class="aa-properties-sidebar">
+              <!-- Start Single properties sidebar -->
+              <div class="aa-properties-single-sidebar"></div>
+              <!-- Start Single properties sidebar -->
+              <div class="aa-properties-single-sidebar">
+                <div class="media">
+                  <div class="media-left"></div>
+                  <div class="media-body">
+                    <a href="[mp]myWishList.html" class="myWish"
+                      ><h2>장바구니</h2></a
+                    >
+                  </div>
+                </div>
+                <div class="media">
+                  <div class="media-left"></div>
+                  <div class="media-body">
+                    <a href="[mp]myContractIng.html" class="myContractIng"
+                      ><h2>내 계약목록</h2></a
+                    >
+                  </div>
+                </div>
+                <div class="media">
+                  <div class="media-left"></div>
+                  <div class="media-body">
+                    <a href="[mp]membershipInfoRe.html" class="aa-membershipRe"
+                      ><h2>회원정보수정</h2></a
+                    >
+                  </div>
+                </div>
+                <div class="media">
+                  <div class="media-left"></div>
+                  <div class="media-body">
+                    <a href="[mp]myContractDone.html" class="done"
+                      ><h2>종료된 계약목록</h2></a
+                    >
+                  </div>
+                </div>
+                <div class="media">
+                  <div class="media-left"></div>
+                  <div class="media-body">
+                    <a href="[mp]walletAddressRegister.html" class="aa-myWallet"
+                      ><h2>전자지갑</h2></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
         </div>
       </div>
     </section>
     <!-- / Properties  -->
 
     <!-- Footer -->
-    <footer></footer>
+
     <!-- / Footer -->
 
     <!-- jQuery library -->
@@ -200,11 +238,5 @@
     <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
     <!-- Custom js -->
     <script src="js/custom.js"></script>
-    <script type="text/javascript"></script>
-    <script language="javascript">
-      function showConfirm() {
-        alert('로그인되었습니다.');
-      }
-    </script>
   </body>
 </html>
