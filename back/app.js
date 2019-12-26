@@ -35,7 +35,7 @@ app.use("/login", loginRouter); //로그인 api
 app.use("/register", registerRouter); //회원가입 api
 app.use("/properties", propertysearchRouter); //매물찾기 api
 app.use("/properties-register", propertyregisterRouter); // 매물등록 api
-app.use("/mywishlist", mywishlist); //찜목록 api
+app.use("/mywishlist", mywishlist); //찜목록 + 마이페이지 api
 app.use("/", indexRouter); //메인 api
 
 // sequelize.sync();
