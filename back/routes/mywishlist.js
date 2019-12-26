@@ -11,7 +11,7 @@ router.get("/", (req, res) => {
   if (!req.session.logined) {
     res.redirect("/");
   } else {
-    res.render("myWishList.html");
+    res.render("[mp]myWishList.html");
   }
 });
 
