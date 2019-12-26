@@ -36,7 +36,7 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: false
       },
       imgpath: {
-        type: DataTypes.STRING(45),
+        type: DataTypes.STRING(1000),
         allowNull: true
       },
       date: {
