@@ -73,7 +73,7 @@
                 <div class="col-md-6 col-sm-6 col-xs-6">
                   <div class="aa-header-right">
                     <p>환영합니다! |</p>
-                    <a href="index.html" class="aa-logout">로그아웃</a>
+                    <a href="/index" class="aa-logout">로그아웃</a>
                   </div>
                 </div>
               </div>
@@ -91,7 +91,7 @@
             <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
             <!-- LOGO -->
             <!-- Text based logo -->
-            <a href="index.html"
+            <a href="/index"
               ><img src="img/logo.jpg" width="150" height="150"
             /></a>
             <!-- Image based logo -->
@@ -99,25 +99,9 @@
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
-              <li>
-                <form name="roomFind" method="get" action="properties.html">
-                  매물찾기
-                </form>
-              </li>
-              <li>
-                <form
-                  name="roomRegist"
-                  method="get"
-                  action="properties-register.html"
-                >
-                  매물등록
-                </form>
-              </li>
-              <li>
-                <form name="myPage" method="get" action="[mp]myWishList.html">
-                  마이페이지
-                </form>
-              </li>
+              <li><a href="/properties">매물찾기</a></li>
+              <li><a href="/properties-register">매물등록</a></li>
+              <li><a href="/[mp]myWishList">마이페이지</a></li>
             </ul>
           </div>
           <!--/.nav-collapse -->
@@ -243,7 +227,7 @@
                           name="submit"
                           class="aa-browse-btn"
                           value="회원 탈퇴하기"
-                          onClick="location.href='secessionDone.html'"
+                          onClick="location.href='/secessionDone'"
                         />
                       </p>
                     </form>
@@ -263,7 +247,7 @@
                 <div class="media">
                   <div class="media-left"></div>
                   <div class="media-body">
-                    <a href="[mp]myWishList.html" class="myWish"
+                    <a href="/[mp]myWishList" class="myWish"
                       ><h2>장바구니</h2></a
                     >
                   </div>
@@ -271,7 +255,7 @@
                 <div class="media">
                   <div class="media-left"></div>
                   <div class="media-body">
-                    <a href="[mp]myContractIng.html" class="myContractIng"
+                    <a href="/[mp]myContractIng" class="myContractIng"
                       ><h2>내 계약목록</h2></a
                     >
                   </div>
@@ -279,7 +263,7 @@
                 <div class="media">
                   <div class="media-left"></div>
                   <div class="media-body">
-                    <a href="[mp]membershipInfoRe.html" class="aa-membershipRe"
+                    <a href="/[mp]membershipInfoRe" class="aa-membershipRe"
                       ><h2>회원정보수정</h2></a
                     >
                   </div>
@@ -287,7 +271,7 @@
                 <div class="media">
                   <div class="media-left"></div>
                   <div class="media-body">
-                    <a href="[mp]myContractDone.html" class="done"
+                    <a href="/[mp]myContractDone" class="done"
                       ><h2>종료된 계약목록</h2></a
                     >
                   </div>
@@ -295,7 +279,7 @@
                 <div class="media">
                   <div class="media-left"></div>
                   <div class="media-body">
-                    <a href="[mp]walletAddressRegister.html" class="aa-myWallet"
+                    <a href="/[mp]walletAddressRegister" class="aa-myWallet"
                       ><h2>전자지갑</h2></a
                     >
                   </div>
