@@ -9,4 +9,9 @@ ejs : 3.0.1<br>
 cookie-parser : 1.4.4<br>
 http : 0.0.0<br>
 sequelize : 5.21.3<br>
-mysql2 : ^2.0.2
+mysql2 : ^2.0.2<br>
+dateformat: ^3.0.3<br>
+express-session: ^1.17.0<br>
+multer: ^1.4.2<br>
+session-file-store: ^1.3.1<br>
+web3: ^1.2.4
