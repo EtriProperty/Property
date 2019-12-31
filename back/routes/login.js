@@ -26,20 +26,25 @@ router.post("/login_on", async function(req, res, next) {
   if (dbPassword === hashPassword) {
     req.session.logined = true;
     req.session.userid = body1.userid;
-    res.redirect("/");
+    req.session.number = result.dataValues.number;
+    req.session.phonenumber = result.dataValues.phone;
+    req.session.useracc = result.dataValues.ethaccount;
+    req.session.save(function() {
+      res.redirect("/");
+    });
   } else {
     // 비밀번호불일치
     res.redirect("/");
   }
 });
 
-router.get("/index", function(req, res) {
-  res.render("index.html");
+router.get("/register", function(req, res) {
+  res.redirect("/register");
 });
 
 /* GET login page. */
 router.get("/", function(req, res) {
-  res.render("signIn.html");
+  res.render("signIn");
 });
 
 module.exports = router;

@@ -46,6 +46,26 @@ module.exports = function(sequelize, DataTypes) {
       address: {
         type: DataTypes.STRING(200),
         allowNull: false
+      },
+      phonenumber: {
+        type: DataTypes.STRING(45),
+        allowNull: false
+      },
+      phonenumber: {
+        type: DataTypes.STRING(500),
+        allowNull: false
+      },
+      wishid: {
+        type: DataTypes.STRING(800),
+        allowNull: true
+      },
+      text: {
+        type: DataTypes.STRING(500),
+        allowNull: false
+      },
+      owneraccount: {
+        type: DataTypes.STRING(45),
+        allowNull: false
       }
     },
     {

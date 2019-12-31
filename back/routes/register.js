@@ -3,6 +3,7 @@ const router = express();
 const userinfo = require("../models").userinfo;
 const crypto = require("crypto");
 
+
 router.post("/register_on", async (req, res) => {
   const body1 = req.body;
   const id = body1.userid;
@@ -28,9 +29,10 @@ router.post("/register_on", async (req, res) => {
       email: body1.useremail,
       phone: body1.userphonenumber,
       auth: 1,
-      salt: salt
+      salt: salt,
+      ethaccount : body1.ethaccount
     });
-    res.render("registerDone.html");
+    res.render("registerDone");
   } else {
     //아이디가 이미 있을때, 409 에러 던져줌
     //원하는건 에러를 던져주면서 리다이렉트하는거, res.json 해서 메시지전송하면서 redirect하면 오류남
@@ -39,17 +41,18 @@ router.post("/register_on", async (req, res) => {
       message: body1.userid,
       result_code: res.statusCode
     });
-    //res.redirect("register.html");
+    //res.redirect("register");
   }
 });
 
+
 router.get("/signin", (req, res) => {
-  res.render("signin.html");
+  res.redirect("/");
 });
 
 /* GET register page. */
 router.get("/", (req, res) => {
-  res.render("register.html");
+  res.render("register");
 });
 
 module.exports = router;

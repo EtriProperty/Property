@@ -180,7 +180,7 @@ jQuery(function($) {
         .stop(true, true)
         .delay(200)
         .fadeOut(200);
-    },
+    }
   );
 
   /* ----------------------------------------------------------- */
@@ -353,3 +353,11 @@ jQuery(function($) {
     ],
   });
 });
+
+// function showConfirm() {
+//   alert('회원정보가 수정되었습니다.');
+// }
+
+console.log('tfsdfdsfsdfs');
+const inputsElement = document.querySelectorAll('input');
+console.log('inputs', inputsElement);

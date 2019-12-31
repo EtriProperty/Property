@@ -17,18 +17,9 @@ db.Sequelize = Sequelize;
 db.userinfo = require("./userinfo")(sequelize, Sequelize);
 db.contentinfo = require("./contentinfo")(sequelize, Sequelize);
 db.replycontent = require("./replycontent")(sequelize, Sequelize);
-db.wishilist = require("./wishilist")(sequelize, Sequelize);
+
 
 //관계정의
-db.userinfo.hasMany(db.wishilist, {
-  sourceKey: "number",
-  foreignKey: "userId"
-});
-
-db.wishilist.belongsTo(db.userinfo, {
-  targetKey: "number",
-  foreignKey: "userId"
-});
 
 db.userinfo.hasMany(db.contentinfo, {
   sourceKey: "number",
@@ -38,16 +29,6 @@ db.userinfo.hasMany(db.contentinfo, {
 db.contentinfo.belongsTo(db.userinfo, {
   targetKey: "number",
   foreignKey: "owner_id"
-});
-
-db.contentinfo.hasMany(db.wishilist, {
-  sourceKey: "number",
-  foreignKey: "homeid"
-});
-
-db.wishilist.belongsTo(db.contentinfo, {
-  targetKey: "number",
-  foreignKey: "homeid"
 });
 
 module.exports = db;

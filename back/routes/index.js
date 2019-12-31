@@ -1,30 +1,73 @@
 const express = require("express");
 const router = express.Router();
+const contentinfo = require("../models").contentinfo;
 
-//마이페이지
-router.get("/membershipInfoRe", (req, res) => {
-  if (!req.session.logined) {
-    //비로그인일떄
-    res.render("index.html");
-  } else {
-    res.render("membershipInfoRe.html");
+async function listcall() {
+  let data = await contentinfo.findAll();
+  let count = data.length;
+  let array = new Array();
+  for (let i = count - 1; i >= count - 4; i--) {
+    //주소,연락처,매물형태,가격,방개수,방평수
+    let {
+      address,
+      phonenumber,
+      roomtype,
+      price,
+      roomcount,
+      roomsize,
+      date
+    } = data[i].dataValues;
+    let id = data[i].dataValues.number;
+    let imgpath = data[i].dataValues.imgpath.split(",")[0];
+    imgpath = imgpath.split("/");
+    let mainimg = imgpath[2];
+    //프론트로 전송
+    array.push({
+      img: mainimg,
+      id: id,
+      address: address,
+      phonenumber: phonenumber,
+      roomtype: roomtype,
+      price: price,
+      roomcount: roomcount,
+      roomsize: roomsize,
+      date: date
+    });
   }
+  return array;
+}
+
+// 최근 매물 로드 API
+router.get("/recentList", async function(req, res) {
+  return res.render("index", {
+    arrays: await listcall(),
+    islogined: req.session.logined
+  });
 });
 
 // 로그아웃 API
-router.get("/logout", (req, res) => {
+router.get("/logout", async (req, res) => {
   req.session.destroy();
-  res.render("index.html");
+  res.render("index", {
+    arrays: await listcall(),
+    islogined: false
+  });
 });
 
-// 페이지로드 API
 router.get("/", async (req, res) => {
   if (!req.session.logined) {
     //비로그인일떄
-    res.render("index.html");
+    res.render("index", {
+      arrays: await listcall(),
+      islogined: req.session.logined
+    });
   } else {
     //이미 로그인 상태일떄
-    res.render("index.html"); //비로그인페이지로수정해야함
+    res.render("index", {
+      arrays: await listcall(),
+      islogined: req.session.logined,
+      userid: req.session.userid
+    });
   }
 });
 
@@ -46,11 +89,7 @@ router.get('/membershipInfoRe', (req, res) => {
   }
 });
 
-// 로그아웃 API
-router.get('/logout', (req, res) => {
-  req.session.destroy();
-  res.render('index.html');
-});
+
 
 // 페이지로드 API
 router.get('/', async (req, res) => {

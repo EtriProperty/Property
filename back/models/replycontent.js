@@ -4,7 +4,7 @@ module.exports = function(sequelize, DataTypes) {
     {
       number: {
         type: DataTypes.INTEGER(11),
-        allowNull: false,
+        // allowNull: false,
         primaryKey: true
       },
       content: {
@@ -19,12 +19,8 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.STRING(45),
         allowNull: false
       },
-      point: {
-        type: DataTypes.INTEGER(11),
-        allowNull: true
-      },
       rtime: {
-        type: DataTypes.DATE,
+        type: DataTypes.DATEONLY,
         allowNull: false
       }
     },
